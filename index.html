@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola: Официальный сайт и новости</title>
+    <meta name="description" content="Откройте мир Coca-Cola: история, продукты, акции и новости о любимом напитке.">
+    <meta name="keywords" content="Coca-Cola, напитки, кола, история Coca-Cola, новости Coca-Cola, акции Coca-Cola">
+    <meta name="author" content="Coca-Cola Company">
+    <link rel="canonical" href="https://www.example.com/coca-cola">
+    <meta property="og:title" content="Coca-Cola: Официальный сайт и новости">
+    <meta property="og:description" content="Узнайте больше о Coca-Cola, наших продуктах и последних новостях!">
+    <meta property="og:image" content="https://www.example.com/images/coca-cola-logo.png">
+    <meta property="og:url" content="https://www.example.com/coca-cola">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Coca-Cola: Официальный сайт и новости">
+    <meta name="twitter:description" content="Откройте мир Coca-Cola и узнайте все о нашем бренде.">
+    <meta name="twitter:image" content="https://www.example.com/images/coca-cola-logo.png">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png"/>
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+</head>
+<body>
+
+
+
+    <header class="header">
+    <div class="header__container">
+        <!-- Лого слева -->
+        <a href="#" class="header__logo">
+            <img src="./img/logo-red.png" alt="Coca-Cola" class="logo-img">
+        </a>
+
+        <!-- Навигация справа -->
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
+                <li class="nav__item"><a href="#assort" class="nav__link">Ассортимент</a></li>
+                <li class="nav__item"><a href="#history" class="nav__link">История</a></li>
+                <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <!-- Бургер меню -->
+        <button class="burger" id="burger" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </button>
+    </div>
+
+    <!-- Модальное окно для мобильной навигации -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__content">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item">
+                        <a href="#home" class="mobile-nav__link" data-text="Главная">
+                            <span class="link-text">Главная</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#about" class="mobile-nav__link" data-text="О компании">
+                            <span class="link-text">О компании</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#assort" class="mobile-nav__link" data-text="Ассортимент">
+                            <span class="link-text">Ассортимент</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#history" class="mobile-nav__link" data-text="История">
+                            <span class="link-text">История</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="#contacts" class="mobile-nav__link" data-text="Контакты">
+                            <span class="link-text">Контакты</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Затемнение фона -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+</header>
+
+      
+
+
+<!-- Главная секция -->
+<section class="home" id="home">
+    <!-- Фоновая картинка -->
+    <div class="home-bg">
+        <img src="./img/backgr.png" alt="Фон" class="bg-image">
+    </div>
+
+    <!-- Бутылка -->
+    <div class="bottle-container">
+        <img src="./img/bottle.png" alt="Coca-Cola" class="home-bottle" id="animatedBottle">
+    </div>
+
+    <!-- Контент -->
+    <div class="home-content">
+        <h1>Ощути момент</h1>
+        <p>Классический вкус, который объединяет поколения.</p>
+    </div>
+</section>
+
+
+
+<!-- Секция o компании -->
+<section class="about" id="about">
+    <div class="about-container">
+        
+        <div class="about-content">
+            <!-- Левая часть - текст в красной рамке -->
+            <div class="about-text-section">
+                <div class="text-frame">
+                    <div class="typing-text" id="typingText"></div>
+                </div>
+            </div>
+            
+            <!-- Правая часть - карусель без стрелок -->
+            <div class="words-carousel">
+                <div class="carousel-track">
+                    <div class="word prev" data-target="foundation">
+                        <span class="word-text">Основание</span>
+                    </div>
+                    <div class="word active" data-target="philosophy">
+                        <span class="word-text">Философия</span>
+                    </div>
+                    <div class="word next" data-target="products">
+                        <span class="word-text">Продукция</span>
+                    </div>
+                    <div class="word hidden" data-target="achievements">
+                        <span class="word-text">Достижения</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!--Ассортимент-->
+        <section class="assortment" id="assort">
+
+            <div class="card" style="background-image: url('img/classicc.jpg');">
+                <h3>Классические вкусы</h3>
+                <button>Просмотреть</button>
+            </div>
+
+            <div class="card" style="background-image: url('img/cherryy.jpg');">
+                <h3>Фруктовые вкусы</h3>
+                <button>Просмотреть</button>
+            </div>
+
+            <div class="card" style="background-image: url('img/limited.jpg');">
+                <h3>Лимитированные предложения</h3>
+                <button>Просмотреть</button>
+                </div>
+
+        
+        </section>
+
+        <!--история-->
+        <section class="history" id="history">
+    <div class="history-container">
+        <!-- Левая колонка с текстом -->
+        <div class="history-text">
+            <h2 class="history-title">История <span class="accent">Легенды</span></h2>
+            <div class="text-content">
+                <p>В 1886 году фармацевт <span class="highlight">Джон Стит Пембертон</span> создал сироп от головной боли...</p>
+                <p>Изначально она продавалась в аптеках как <span class="highlight">тонизирующее средство</span>...</p>
+                <p>С тех пор формула хранится в строжайшем секрете, а <span class="highlight">узнаваемый красный цвет</span> стал символом вкуса во всем мире.</p>
+            </div>
+        </div>
+
+        <!-- Правая колонка с каруселью -->
+        <div class="history-carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide active">
+                    <img src="./img/pic11.jpg" alt="1887 г.  Купоны впервые используются для продвижения Coca-Cola.">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/pic2.jpg" alt="1950-1960-е года.  Включение изогнутой формы бутылки с ее рифленными стеклянными панелями в дизайн своего логотипа.">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/pic3.jpg" alt="1931 г.  Художник Х.Сандблом создает свою первую иллюстрацию Санта-Клауса, который выпивает колу. В будущем Рождество уже будет  сложно представить без знаменитого напитка.">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/pic4.jpg" alt="1942-1943-е г.  Первый из серии плакатов. Р.Будрафф обязуется поставлять колу военным за пять центов, независимо от затрат компании.">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./img/pic5.jpg" alt="1985 г.  Формула Coca-Cola изменена впервые за 99 лет, что вызвало протесты. Продукт произведенный по оригинальной формуле вернется на рынок 79 дней спустя.">
+                </div>
+                <!-- Дубликат для бесшовности -->
+                <div class="carousel-slide">
+                    <img src="./img/pic11.jpg" alt="Первая реклама Кока-Колы">
+                </div>
+            </div>
+
+            <button class="carousel-btn prev-btn" aria-label="Предыдущее фото">
+                <span>&lt;</span>
+            </button>
+            <button class="carousel-btn next-btn" aria-label="Следующее фото">
+                <span>&gt;</span>
+            </button>
+
+            <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+            </div>
+        </div>
+    </div>
+
+<!-- Модальное окно для просмотра фото -->
+            <div class="modal-overlay" id="modalOverlay">
+                 <div class="modal-content">
+                    <button class="modal-close" id="modalClose">&times;</button>
+                    <div class="modal-image-container">
+                        <img class="modal-image" id="modalImage" src="" alt="">
+                    </div>
+                    <div class="modal-caption">
+                        <p id="modalCaption"></p>
+                    </div>
+                 </div>
+            </div>
+
+        </section>
+
+        <!--контакты-->
+        <section class="contacts" id="contacts">
+                <div class="contacts-container">
+        <!-- Заголовок -->
+        <h1 class="contacts-main-title">Контакты</h1>
+        
+        <div class="contacts-content">
+            <!-- Левая колонка - ссылки -->
+            <div class="contacts-links-section">
+                <h2 class="contacts-subtitle">Наши контакты</h2>
+                
+                <div class="links-grid">
+                    <a href="#" class="social-link" data-social="vk">
+                        <span class="social-icon">X</span>
+                        <span class="social-text">Мы в X</span>
+                        <span class="social-arrow">→</span>
+                    </a>
+                    
+                    <a href="#" class="social-link" data-social="telegram">
+                        <span class="social-icon">Inst</span>
+                        <span class="social-text">Мы в Instagram</span>
+                        <span class="social-arrow">→</span>
+                    </a>
+
+                    <a href="#" class="social-link" data-social="email">
+                        <span class="social-icon">@</span>
+                        <span class="social-text">coca-cola@original.com</span>
+                        <span class="social-arrow">→</span>
+                    </a>
+
+                    <a href="#" class="social-link" data-social="phone">
+                        <span class="social-icon">📞</span>
+                        <span class="social-text">+7 (800) 777 6776</span>
+                        <span class="social-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!--Правая колонка адресаа -->
+            <div class="contacts-address-section">
+                <h2 class="contacts-subtitle">Наш адрес</h2>
+                
+                <div class="address-card">
+                    <div class="address-text">
+                        <p>Улица Пушкина, дом Калатушника, кв.12</p>
+                        <p class="distance">150 км от Рима и 600 км от Нарнии.</p>
+                    </div>
+                    
+                    <div class="map-placeholder" id="mapTrigger">
+                        <div class="map-preview">
+                            <span class="map-icon"> </span>
+                            <span class="map-text">Посмотреть на карте</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дополнительная инфа -->
+                <div class="additional-info">
+                    <div class="info-item">
+                        <span class="info-label">Время работы:</span>
+                        <span class="info-value">Круглосуточно</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Доставка:</span>
+                        <span class="info-value">По всей Вселенной</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно карты -->
+                <div class="map-modal" id="mapModal">
+                    <div class="modal-content">
+                        <button class="modal-close" id="closeMap">×</button>
+                        <h3>Мы на карте</h3>
+                        <div class="map-container">
+                            <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2173.6789012345678!2d45.335205!3d56.140242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTbCsDA4JzI0LjkiTiA0NcKwMjAnMDYuNyJF!5e0!3m2!1sru!2sru!4v1234567890"
+                        width="100%" 
+                        height="400"
+                        style="border:0" 
+                        allowfullscreen 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                     </iframe>
+                 </div>
+              </div>
+         </div>
+
+        </section>
+        <!--CXTNXBR-->
+        <section class="counter-section">
+            <div class="counter-container">
+                <div class="counter-card">
+            <!-- Основной контент -->
+                <div class="counter-content">
+                <div class="counter-title">Бутылок куплено сегодня</div>
+                <div class="counter-number" id="counterNumber">66</div>
+                <div class="counter-subtitle">Каждая бутылка — момент счастья</div>
+            </div>
+            
+            <!-- Интерактивная кнопка -->
+            <button class="counter-btn" id="counterBtn">
+                <span class="btn-text">Добавить бутылку</span>
+                <span class="btn-plus">+</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Лого -->
+        <div class="footer-brand">
+            <img src="./img/logo-white.png" alt="Coca-Cola" class="footer-logo">
+        </div>
+        
+        <!-- Центральный блок - копирайт -->
+        <div class="footer-copyright">
+            <span>© 2024 Coca‑Cola · Все права защищены</span>
+        </div>
+        
+        <!-- Соцсети -->
+        <div class="footer-social">
+            <a href="#" class="social-link" aria-label="ВКонтакте">VK</a>
+            <a href="#" class="social-link" aria-label="Telegram">TG</a>
+            <a href="#" class="social-link" aria-label="YouTube">YT</a>
+        </div>
+
+
+
+    </footer>
+    
+<!-- Добавь в конец body -->
+<div class="bubbles-container" id="bubblesContainer"></div>
+
+<script src="./main.js"></script>
+</body>
+</html>
